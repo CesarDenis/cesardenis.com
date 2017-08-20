@@ -2,7 +2,7 @@
 # Can be used in your theme by calling 'site.title' and so on
 title: Cesar Denis
 description: UI/UX Designer, Front End
-url: http://cesardenis.github.io
+url: http://cesardenis.com
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: .tmp/src
