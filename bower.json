@@ -1,0 +1,14 @@
+{
+  "name": "cesar-denis",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap.scss"
+      ]
+    }
+  },
+}

@@ -1,0 +1,80 @@
+// Our variables
+$font-family-base: "Raleway", sans-serif;
+$font-size-base: 1rem !default;
+$font-weight-base: 500;
+$small-font-size:  $font-size-base * 0.875;
+$line-height-base: 1.6;
+
+$text-color:       #52616b;
+$background-color: #fafafa;
+$brand-color:      #3389ce;
+
+$gray-color:       #c9d6df;
+$gray-color-light: #f0f5f9;
+$gray-color-dark:  #52616b;
+
+//
+// Color system
+//
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:  #1E2022 !default;
+
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+) !default;
+
+$blue:    $brand-color !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #D64F4A !default;
+$orange:  #FF7A2B !default;
+$yellow:  #FBEC50 !default;
+$green:   #00B86B !default;
+$teal:    #20c997 !default;
+$cyan:    #00BFEE !default;
+
+$colors: (
+  blue: $blue,
+  indigo: $indigo,
+  purple: $purple,
+  pink: $pink,
+  red: $red,
+  orange: $orange,
+  yellow: $yellow,
+  green: $green,
+  teal: $teal,
+  cyan: $cyan,
+  white: $white,
+  gray: $gray-color,
+  gray-dark: $gray-color-dark
+) !default;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-color-dark,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+) !default;
