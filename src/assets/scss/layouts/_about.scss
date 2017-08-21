@@ -1,0 +1,25 @@
+.expertise-block {
+  @extend .text-center;
+  margin: calculateRem(40px) 0 calculateRem(10px);
+
+  .fa {
+    @include fontSize(50px);
+  }
+
+  h4.title {
+    margin: calculateRem(18px) 0;
+    font-weight: 900;
+  }
+
+  p {
+    color: color('gray-dark');
+  }
+  
+  @include media-breakpoint-up(md) { 
+    margin: calculateRem(40px) 0 0;
+    
+    h4.title {
+      @include fontSize(30px);
+    }
+  }
+}
