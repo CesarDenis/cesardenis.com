@@ -18,7 +18,7 @@ gulp build --prod
 rm -rf ../cesardenis.com.gh-pages
 
 # clone 'gh-pages' branch of the repository using encrypted GH_TOKEN for authentification
-git clone -b gh-pages https://${GH_TOKEN}@github.com/CesarDenis/cesardenis.github.io.git ../cesardenis.com.gh-pages
+git clone -b gh-pages https://${GH_TOKEN}@github.com/CesarDenis/cesardenis.com.git ../cesardenis.com.gh-pages
 
 # copy generated HTML site to 'gh-pages' branch
 cp -R dist/* ../cesardenis.com.gh-pages
