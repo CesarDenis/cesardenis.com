@@ -19,6 +19,7 @@ author:
   bio: Front-end Developer
   twitter: cesardenis
   github: cesardenis
+  linkedin: cesardenis
 
 # _config.build.yml overwrites these options when you run `gulp build`
 # Enables future posts (posts with dates in the future) and drafts
