@@ -79,3 +79,62 @@
     @include button-color-variant($value);
   }
 }
+
+.btn-ghost-black {
+  color: $black;
+  background-color: theme-color(primary);
+  background-image: none;
+  border-color: $black;
+
+  @include hover {
+    color: theme-color(primary);
+    background-color: $black;
+    border-color: $black;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $gray-color-dark;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: theme-color(primary);
+    background-color: $black;
+    border-color: $black;
+  }
+}
+
+.btn-ghost-white {
+  color: $white;
+  background-color: transparent;
+  background-image: none;
+  border-color: theme-color(primary);
+
+  @include hover {
+    color: $black;
+    background-color: theme-color(primary);
+    border-color: theme-color(primary);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($black, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $gray-color-dark;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $black;
+    background-color: theme-color(primary);
+    border-color: theme-color(primary);
+  }
+}
