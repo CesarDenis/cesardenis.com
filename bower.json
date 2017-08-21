@@ -3,7 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "v4.0.0-beta",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^4.7.0",
+    "jquery.easing": "jquery-easing-original#^1.4.1"
   },
   "overrides": {
     "font-awesome": {
