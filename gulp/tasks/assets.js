@@ -27,6 +27,7 @@ gulp.task('scripts', () =>
   gulp.src([
     'bower_components/jquery/dist/jquery.js',
     'bower_components/jquery.easing/jquery.easing.js',
+    'bower_components/velocity/velocity.js',
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/main.js'
   ])

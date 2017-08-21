@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap": "v4.0.0-beta",
     "font-awesome": "^4.7.0",
-    "jquery.easing": "jquery-easing-original#^1.4.1"
+    "jquery.easing": "jquery-easing-original#^1.4.1",
+    "velocity": "^1.5.0"
   },
   "overrides": {
     "font-awesome": {
