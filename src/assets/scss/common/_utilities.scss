@@ -1,4 +1,5 @@
 // Contextual colors
+@import "bower_components/font-awesome-animation/src/_font-awesome-animation.scss";
 
 @each $color, $value in $colors {
   @include text-emphasis-variant('.text-#{$color}', $value);
