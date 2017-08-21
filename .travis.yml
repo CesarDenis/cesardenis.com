@@ -1,0 +1,33 @@
+language: node_js
+
+node_js:
+  - '6'
+
+cache:
+  directories:
+  - node_modules
+
+before_install:
+  - rvm install ruby-2.4.0
+  - rvm use 2.4.0 --fuzzy
+  - export GEMDIR=$(rvm gemdir)
+
+before_script:
+  - npm install -g gulp-cli
+  - npm install -g bower
+  - bundler install
+  - chmod +x ./build.sh
+
+# execute this script on each commit
+script: "./build.sh"
+
+# only take into account 'master' branch
+branches:
+  only:
+  - master
+
+env:
+  global:
+  - secure: "I6wz2Cz4J64CctyY6IdxBmOgOFEck9w1caBYdCEtQerOCRsjiPJLngXgko9NW1JhxBJaU2td+r+BnFNgmKzP2NcoIi1H5sxOi4P28+J4uM8WBy/iklFpGDjxZXM1HHKjfx+bojJPk9XqweG/YyUExqey2a5lTOJi6FZ3C2a6qZrbHgoasGRW4UC59nPs8AemgiRu+Lnu5wApIkuXsbxy8uMSq4wH4vts2/cnKAipjaYfclMy+12aELz40Fz/BmIxHRw6LCAIyeYpuYPCAykL/CRgAhE/ZaW8mSM20fGIHR3Ye+X6h64+QP7Ngr0aVebe5kzVyrYyDOEnAGf0EcS6sSO0gD9dHx3YdR0WzBKaEaEcJRFasEA5GhOysG1kUqm69tM1pKHojEeuuLNS0NH+po1LYMZoJbrC76XZ/qhBaQYtk6CdylmhaUD0QDuS6S2xeQROZcbuGFPxEVxwEXz6c8+E76EUBCzu37QKRbtr50I8UvknALNiNqDSTnsgoze0eIvkK3X7z7/gNjz41gEZFnhGW/4NyRCaNvZTuX6Y2qS/QPYpB6G+FBcJtKHdlrczy7975rJrJKCjMroc2XfDjUj6HgOJNthvBUGmxVuplr1t9c09u6x94xycr4FoXNZjKpm2sROEQSyqEhZ88nNiHQ2oDTGI217LXHKLjx469hY="
+
+sudo: false # route your build to the container-based infrastructure for a faster build

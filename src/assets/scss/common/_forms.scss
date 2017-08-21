@@ -1,0 +1,64 @@
+::-webkit-input-placeholder {
+  color: rgba($white, 0.7)
+}
+
+:-moz-placeholder {
+  color: rgba($white, 0.7)
+}
+
+::-moz-placeholder {
+  color: rgba($white, 0.7)
+}
+
+:-ms-input-placeholder {
+  color: rgba($white, 0.7)
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  margin: 0em;
+}
+
+input, textarea, select, fieldset {
+  margin-bottom: 1.5rem;
+}
+
+.full-width {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea, select {
+  color: $white;
+  height: 38px;
+  padding: 6px 10px;
+  background-color:transparent;
+  border: 2px solid $white;
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+  @include fontSize(13px);
+  &:focus {
+    border: 2px solid theme-color(info);
+    outline: 0;
+  }
+}
+
+input[type="email"], input[type="number"], input[type="search"], input[type="text"], input[type="tel"], input[type="url"], input[type="password"], textarea {
+  appearance: none;
+}
+
+textarea {
+  min-height: 65px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+

@@ -1,0 +1,24 @@
+{
+  "name": "cesar-denis",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "v4.0.0-beta",
+    "font-awesome": "^4.7.0",
+    "jquery.easing": "jquery-easing-original#^1.4.1",
+    "velocity": "^1.5.0",
+    "font-awesome-animation": "^0.0.10"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "scss/font-awesome.scss",
+        "fonts/*"
+      ]
+    },
+    "font-awesome-animation": {
+      "main": [
+        "src/_font-awesome-animation.scss"
+      ]
+    }
+  }
+}

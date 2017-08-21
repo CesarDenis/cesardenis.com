@@ -1,0 +1,140 @@
+.btn {
+  @include fontSize(13px);
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+/* Button Shapes */
+.btn-square {
+  border-radius: 0;
+}
+
+.btn-round {
+  border-radius: 10px;
+}
+
+.btn-circle {
+  border-radius: 10em;
+}
+
+
+/* Button Appear */
+.btn-appear {
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s;
+
+  span {
+    display: inline-block;
+    position: relative;
+    padding: 0 11px 0 11px;
+    transition: padding 0.2s;
+  }
+
+  i {
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.2s, right 0.2s;
+  }
+
+  &:hover {
+    span {
+      padding: 0 22px 0 0;
+    }
+
+    i {
+      transition: opacity 0.2s, right 0.2s;
+      opacity: 1;
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  &.btn-lg {
+    span {
+      padding: 0 15px 0 15px;
+    }
+    &:hover {
+      span {
+        padding: 0 30px 0 0;
+      }
+    }
+  }
+}
+
+.btn-icon {
+  i {
+    margin-left: 1rem;
+  }
+}
+
+
+@each $color, $value in $colors {
+  .btn-color-#{$color} {
+    @include button-color-variant($value);
+  }
+}
+
+.btn-ghost-black {
+  color: $black;
+  background-color: theme-color(primary);
+  background-image: none;
+  border-color: $black;
+
+  @include hover {
+    color: theme-color(primary);
+    background-color: $black;
+    border-color: $black;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $gray-color-dark;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: theme-color(primary);
+    background-color: $black;
+    border-color: $black;
+  }
+}
+
+.btn-ghost-white {
+  color: $white;
+  background-color: transparent;
+  background-image: none;
+  border-color: theme-color(primary);
+
+  @include hover {
+    color: $black;
+    background-color: theme-color(primary);
+    border-color: theme-color(primary);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($black, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $gray-color-dark;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $black;
+    background-color: theme-color(primary);
+    border-color: theme-color(primary);
+  }
+}

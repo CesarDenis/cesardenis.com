@@ -1,0 +1,20 @@
+/*
+The main SCSS file for everything, yep
+*/
+
+@import 'base/fonts';
+@import 'base/variables';
+@import 'base/bootstrap';
+@import 'base/functions';
+@import 'base/mixins';
+
+@import 'common/buttons';
+@import 'common/forms';
+@import 'common/utilities';
+
+@import 'layouts/pages';
+@import 'layouts/hero';
+@import 'layouts/about';
+@import 'layouts/projects';
+@import 'layouts/contact';
+@import 'layouts/footer';
