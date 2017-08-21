@@ -36,3 +36,12 @@ p.lead {
   }
 }
 
+#work {
+  background-color: $gray-color-light;
+
+  @include media-breakpoint-up(lg) {
+    .container {
+      max-width: 960px;
+    }
+  }
+}
