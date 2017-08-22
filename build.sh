@@ -30,6 +30,7 @@ git config user.email "cesar@cesardenis.com"
 git config user.name "cesardenis"
 git add -A .
 git commit -a -m "Travis #$TRAVIS_BUILD_NUMBER"
-git push --force --quiet origin gh-pages > /dev/null 2>&1
+#git push --quiet origin gh-pages > /dev/null 2>&1
+git push --quiet origin gh-pages
 
 echo "Finished Deployment!"
