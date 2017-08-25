@@ -67,36 +67,24 @@ layout: default
         <p class="lead text-gray-dark">Some of my latest works.</p>
       </div>
     </div>
-    <div class="project-showcase">
-      <div class="row">
-        <div class="col-md-6 order-md-1">
-          <img src="/assets/images/project-showcase-ciab.png" class="project-image img-fluid">
-        </div>
-        <div class="col-md-6">
-          <div class="project-content content-left">
-            <h5 class="project-title">Ciab FEBRABAN</h5>
-            <p class="project-tags">UX/UI Design, HTML Theme, build with Gulp, SASS and jQuey</p>
-            <p class="project-description">The benchmark congress in Latin America in information technology for the financial industry will debate the requirements of the new generation of customers with a digital way of thinking.</p>
-            <a href="http://ciab.org.br" target="_blank" class="btn btn-color-red btn-circle">Visit Website</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="project-showcase">
+    {% for project in site.data.projects %}
+      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+      <div class="project-showcase">
         <div class="row">
-          <div class="col-md-6">
-            <img src="/assets/images/project-showcase-ciab.png" class="project-image img-fluid">
+          <div class="col-md-6{% if thecycle == 'odd' %} order-md-1{% endif %}">
+            <img src="/assets/images/{{ project.image }}" class="project-image img-fluid">
           </div>
           <div class="col-md-6">
-            <div class="project-content content-right">
-              <h5 class="project-title">Ciab FEBRABAN</h5>
-              <p class="project-tags">UX/UI Design, HTML Theme, build with Gulp, SASS and jQuey</p>
-              <p class="project-description">The benchmark congress in Latin America in information technology for the financial industry will debate the requirements of the new generation of customers with a digital way of thinking.</p>
-              <a href="http://ciab.org.br" target="_blank" class="btn btn-color-red btn-circle">Visit Website</a>
+            <div class="project-content{% if thecycle == 'odd' %} content-left{% else %} content-right{% endif %}">
+              <h5 class="project-title">{{ project.title }}</h5>
+              <p class="project-tags">{{ project.tags }}</p>
+              <p class="project-description">{{ project.description }}</p>
+              <a href="{{ project.url }}" target="_blank" class="btn btn-color-red btn-circle">{% if project.button %}{{ project.button }}{% else %}Visit Website{% endif %}</a>
             </div>
           </div>
         </div>
       </div>
+    {% endfor %}
   </div>
 </section>
 
