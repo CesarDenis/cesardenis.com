@@ -1,0 +1,24 @@
+- title: Ciab FEBRABAN
+  tags: UX/UI Design, HTML Theme, build with Gulp, SASS and jQuey
+  description: The benchmark congress in Latin America in information technology for the financial industry will debate the requirements of the new generation of customers with a digital way of thinking.
+  image: project-showcase-ciab.png
+  url: http://ciab.org.br
+
+- title: App CiabDeBolso
+  tags: UX/UI Design, Natives App, build with Xamarin
+  description: The benchmark congress in Latin America in information technology for the financial industry will debate the requirements of the new generation of customers with a digital way of thinking.
+  image: project-showcase-ciabdebolso.png
+  url: http://ciab.org.br/CiabDeBolso
+
+- title: Intercarta
+  tags: WordPress Theme, build with Gulp, SASS and jQuey
+  description: A pioneer in bonded paper in Brazil and leader in the segment for more than 25 years.
+  image: project-showcase-intercarta.png
+  url: http://intercarta.com.br
+
+- title: CLADE
+  tags: UX/UI Design for WordPress Theme
+  description: CLADE is a plural articulation of civil society organizations that acts in defense and promotion of the right to a free and public education for all.
+  image: project-showcase-clade.png
+  url: https://invis.io/9B9LSWQAZ
+  button: Visit Invision
