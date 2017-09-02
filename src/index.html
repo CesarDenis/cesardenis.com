@@ -69,18 +69,15 @@ layout: default
       </div>
     </div>
     {% for project in site.data.projects %}
-      {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
       <div class="project-showcase">
         <div class="row">
-          <div class="col-md-6{% if thecycle == 'odd' %} order-md-1{% endif %}">
-            <img src="/assets/images/{{ project.image }}" class="project-image img-fluid">
-          </div>
-          <div class="col-md-6">
-            <div class="project-content{% if thecycle == 'odd' %} content-left{% else %} content-right{% endif %}">
+          <div class="col-md-12">
+            <div class="project-content text-center">
               <h5 class="project-title">{{ project.title }}</h5>
               <p class="project-tags">{{ project.tags }}</p>
               <p class="project-description">{{ project.description }}</p>
               <a href="{{ project.url }}" target="_blank" class="btn btn-color-red btn-circle">{% if project.button %}{{ project.button }}{% else %}Visit Website{% endif %}</a>
+              <img src="/assets/images/{{ project.image }}" class="project-image img-fluid">
             </div>
           </div>
         </div>
