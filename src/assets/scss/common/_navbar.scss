@@ -1,0 +1,51 @@
+.navbar-custom {
+  transition: background-color .3s;
+  
+  .navbar-brand {
+    color: $white;
+
+    @include hover-focus {
+      color: $white;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: rgba($white, .6);
+      text-transform: uppercase;
+
+      @include hover-focus {
+        color: $white;
+        text-decoration: none;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-dark-color;
+    border-color: $navbar-dark-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-dark-toggler-icon-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-dark-color;
+  }
+
+  &.top-nav-collapse {
+    background-color: theme-color(primary);
+  }
+}
