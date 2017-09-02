@@ -1,5 +1,5 @@
 footer {
-  padding: calculateRem(80px) 0 calculateRem(50px);
+  padding: calculateRem(50px) 0;
   background-color: $gray-800;
   color: #fff;
   text-align: center;
@@ -12,26 +12,24 @@ footer {
     width: 50px;
     height: 25px;
     text-indent: -99999px;
-    margin: 0 auto;
+    margin: 0 auto calculateRem(16px);
     border-radius: 3px;
     @include media-breakpoint-up(md) {
       width: 60px;
       height: 30px;
     }      
+    @include media-breakpoint-up(lg) {
+      margin: 0 50px 0;
+    }
   }
   
   p {
     color: rgba($white,0.4);
     line-height: 1.8;
     @include fontSize(13px);
-  }
-
-  p.designed-by-me {
-    margin: calculateRem(24px) 0 0;
-  }
-
-  p.copy {
-    margin: 0 0 calculateRem(24px);
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+    }
   }
 
   .fa-heart {
