@@ -1,192 +1,36 @@
-body.overflow-hidden {
-	overflow: hidden;
-}
+.form-container {
+	margin: 0 auto;
+	padding: 44px 0 0;
+	width: 95%;
 
-.cd-section {
-	background-color: $gray-800;
-
-	p {
-		@include font-smoothing;
-	}
-}
-
-.cd-modal {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-
-	visibility: hidden;
-	opacity: 0;
-	pointer-events: none;
-
-	transition: visibility 0s .3s, opacity .3s 0s, z-index 0s .3s;
-
-	.cd-modal-content {
-		height: 100%;
-		width: 100%;
-		overflow-y: auto; 
-		color: $white;
-		@include font-smoothing;
-
-		.contact-header {
-			padding: 50px 0 40px;
+	form {
+		input[type=text],
+		input[type=url],
+		input[type=email] {
+			margin-bottom: 32px;
 		}
 
-		a.logo {
-			background-image: url(../images/logocolorcesar.svg);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			display: inline-block;
-			width: 60px;
-			height: 30px;
-			text-indent: -99999px;
-			opacity: 1;
-			margin: 0 auto;
-			text-align: center;
-			border: 0;
-
-			@include media-breakpoint-up(md) { 
-				width: 80px;
-				height: 40px;
-			}
+		textarea {
+			min-height: 180px;
+		}			
+		input[type=submit] {
+			margin-top: 30px;
 		}
-
-		.form-container {
-			margin: 0 auto;
-			padding: 44px 0 40px 0;
-			width: 95%;
-
-			form {
-				input[type=text],
-				input[type=url],
-				input[type=email] {
-					margin-bottom: 32px;
-				}
-	
-				textarea {
-					min-height: 180px;
-				}			
-				input[type=submit] {
-					margin-top: 30px;
-				}
-			}	
-
-			@include media-breakpoint-up(md) { 
-				width: 80%;
-			}
-
-			@include media-breakpoint-up(xl) { 
-				margin: 0 auto;
-				padding: 50px 0;
-				width: 50%;
-			}
-		}
-
-		p.required {
-			margin-top: 12px;
-			color: rgba($white,0.7);
-			@include fontSize(13px);
-		}
-
-	}
-
-	.modal-is-visible & {
-		z-index: 1;
-		visibility: visible;
-		opacity: 1;
-		pointer-events: auto;
-		
-		transition: visibility 0s 0s, opacity .3s 0s, z-index 0s 0s;
-
-		.cd-modal-content {
-			-webkit-overflow-scrolling: touch;
-		}
-	}
-
-}
-
-.cd-modal-action {
-	position: relative;
-
-	.cd-modal-bg {
-		display: inline-block;
-		height: 4em;
-		background-color: $gray-800;
-	}
-	
-	.btn-model {
-		display: inline-block;
-		padding: .5rem 2rem;
-    height: auto;
-		width: 15em;
-		line-height: 2.5em;
-		white-space: nowrap;
-		transition: color 0.2s 0.3s, background-color 0.3s ease-in-out, width 0.3s 0s;
-		@include fontSize(14px);
-		@include font-smoothing;
-		
-		&.to-circle {
-			width: 4em;
-			color: transparent;
-			transition: color 0.2s 0s, background-color 0.3s ease-in-out, width 0.3s 0.2s;
-		}
-	}
-
-	.cd-modal-bg {
-		position: absolute;
-		z-index: 1;
-		left: 50%;
-    top: 0;
-		width: 4em;
-		border-radius: 50%;
-		opacity: 0;
-		visibility: hidden;
-    transform: translateZ(0) translateX(-2em);
-		transition: visibility 0s .5s;
-
-		&.is-visible {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
-}
-
-.cd-modal-close {
-	position: fixed;
-	z-index: 1;
-	top: 20px;
-	right: 5%;
-
-	height: 50px;
-	width: 50px;
-	border-radius: 50%;
-	
-	background: $black url(../images/cd-icon-close.svg) no-repeat center center;
-	
-	/* image replacement */
-	overflow: hidden;
-	text-indent: 100%;
-	white-space: nowrap;
-
-	visibility: hidden;
-	opacity: 0;
-  transform: translateZ(0) scale(0);
-	transition: transform .3s 0s, visibility 0s .3s, opacity .3s 0s;
-
-	.no-touch &:hover {
-		background-color: rgba(#000, .5);
-	}
-
-	.modal-is-visible & {
-		visibility: visible;
-		opacity: 1;
-		transition: transform .3s 0s, visibility 0s 0s, opacity .3s 0s;
-		transform: scale(1);
-	}
+	}	
 
 	@include media-breakpoint-up(md) { 
-		top: 70px;
+		width: 80%;
+	}
+
+	@include media-breakpoint-up(xl) { 
+		margin: 0 auto;
+		padding: 50px 0 0;
+		width: 50%;
+	}
+
+	p.required {
+		margin-top: 12px;
+		color: rgba($white,0.7);
+		@include fontSize(13px);
 	}
 }
