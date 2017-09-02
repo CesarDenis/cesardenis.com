@@ -8,10 +8,7 @@
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-
-  @include media-breakpoint-up(sm) { 
-    background-image: url('../images/hero-bg.jpg');
-  }
+	background-image: url('../images/hero-bg.jpg');
 }
 
 
@@ -36,14 +33,34 @@
     font-size: 1.5rem;
     font-weight: 900;
     color: #fff;
-    margin-bottom: 0rem;
+    margin-bottom: 1.5rem;
     @include media-breakpoint-up(md) { 
       font-size: 2.5rem;
     }
     @include media-breakpoint-up(lg) { 
       font-size: 3.563rem
     }
-  }
+	}
+	p {
+		color: #fff;
+		&.hero-hello {
+			font-size: 1.2em;
+			margin-bottom: 0;
+			@include media-breakpoint-up(lg) { 
+				font-size: 1.45em;
+			}
+		}
+		&.hero-about {
+			font-size: 1em;
+			padding: 0 10%;
+			@include media-breakpoint-up(md) { 
+				font-size: 1.2em;
+			}
+			@include media-breakpoint-up(lg) { 
+				font-size: 1.625em;
+			}
+		}
+	}
 }
 
 .home-logo {
@@ -130,8 +147,9 @@
 	}
 
 	b {
+		font-weight: normal;
 		visibility: hidden;
-
+		
 		&.is-visible {
 			visibility: visible;
 		}
