@@ -8,8 +8,10 @@ The main SCSS file for everything, yep
 @import 'base/functions';
 @import 'base/mixins';
 
+@import 'common/badge';
 @import 'common/buttons';
 @import 'common/forms';
+@import 'common/navbar';
 @import 'common/utilities';
 
 @import 'layouts/pages';

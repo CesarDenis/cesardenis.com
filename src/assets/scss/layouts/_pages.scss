@@ -27,6 +27,18 @@ section {
   }
 }
 
+.section-subtitle {
+  @include fontSize(18px);
+  margin: 0 0 calculateRem(16px);
+  line-height: 1.4;
+  font-weight: 700;
+
+  @include media-breakpoint-up(md) { 
+      @include fontSize(28px);
+      margin: 0 0 calculateRem(18px);
+  }
+}
+
 p.lead {
   @include fontSize(16px);
   margin: 0 0 calculateRem(25px);

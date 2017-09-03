@@ -23,20 +23,17 @@
       color: color('gray-dark');
       line-height: 1.75;
       margin-bottom: calculateRem(25px);
-
-      &:before {
-        @include fontSize(18px);
-        content: "\2022";
-        margin-right: 4px;
-        vertical-align: middle;
-        color: color(red);
-      }
     }
 
     .project-description {
       color: color('gray-dark');
       margin: calculateRem(15px) 0 calculateRem(30px);
       line-height: 1.6;
+    }
+
+    .project-image {
+      padding: 0 10%;
+      margin: calculateRem(10px) 0 calculateRem(20px);
     }
 
     a.btn {
@@ -63,8 +60,13 @@
         @include fontSize(28px);
       }
 
-      a.btn {
+      .project-image {
+        padding: 0 10%;
         margin: calculateRem(10px) 0 calculateRem(60px);
+      }
+
+      a.btn {
+        margin: calculateRem(10px) 0 calculateRem(30px);
       }
     }
   }    
@@ -82,7 +84,7 @@
   }
 
   &:last-child {
-    .project-content a.btn {
+    .project-content .project-image {
       margin: calculateRem(10px) 0 0;
     }
   }    

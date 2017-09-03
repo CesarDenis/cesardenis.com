@@ -28,6 +28,8 @@ gulp.task('scripts', () =>
     'bower_components/jquery/dist/jquery.js',
     'bower_components/jquery.easing/jquery.easing.js',
     'bower_components/velocity/velocity.js',
+    'bower_components/bootstrap/js/dist/util.js',
+    'bower_components/bootstrap/js/dist/collapse.js',
     'src/assets/javascript/vendor.js',
     'src/assets/javascript/main.js'
   ])

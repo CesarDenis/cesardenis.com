@@ -1,0 +1,6 @@
+@each $color, $value in $colors {
+  .badge-outline-#{$color} {
+    color: $value;
+    border: 2px solid $value;
+  }
+}
