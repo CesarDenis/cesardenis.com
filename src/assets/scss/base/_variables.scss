@@ -105,3 +105,16 @@ $btn-font-weight:           600 !default;
 
 
 $btn-transition:            all .3s ease-in-out !default;
+
+
+// Badges
+
+$badge-color:                 $white !default;
+$badge-font-weight:           700 !default;
+$badge-padding-y:             .4em !default;
+$badge-padding-x:             .6em !default;
+
+$badge-pill-padding-x:        .8em !default;
+// Use a higher than normal value to ensure completely rounded edges when
+// customizing padding or font-size on labels.
+$badge-pill-border-radius:    10rem !default;
